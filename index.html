@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PsiPro - Sistema para Psicólogos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Light Theme (Default) */
+        --bg-main: #F7F7F7;
+        --bg-card: #FFFFFF;
+        --bg-input: #F1F1F1;
+        --border-color: #D8D8D8;
+        --text-main: #1A1A1A;
+        --text-secondary: #555555;
+        --text-placeholder: #8A8A8A;
+        --primary: #6C63FF;
+        --primary-hover: #554BFF;
+        --scroll-track: #F7F7F7;
+        --scroll-thumb: #D8D8D8;
+        --nav-hover: #E5E5E5;
+        --modal-overlay: rgba(0, 0, 0, 0.5);
+      }
+
+      [data-theme='dark'] {
+        /* Dark Theme */
+        --bg-main: #121212;
+        --bg-card: #1A1A1A;
+        --bg-input: #2A2A2A;
+        --border-color: #3C3C3C;
+        --text-main: #FFFFFF;
+        --text-secondary: #9A9A9A;
+        --text-placeholder: #9A9A9A;
+        --primary: #6C63FF;
+        --primary-hover: #817AFF;
+        --scroll-track: #121212;
+        --scroll-thumb: #3C3C3C;
+        --nav-hover: #2A2A2A;
+        --modal-overlay: rgba(0, 0, 0, 0.7);
+      }
+
+      body { 
+        font-family: 'Inter', sans-serif; 
+        background-color: var(--bg-main); 
+        color: var(--text-main);
+        transition: background-color 0.3s, color 0.3s;
+      }
+      
+      /* Scrollbar Customization */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--scroll-track); 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--scroll-thumb); 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--primary); 
+      }
+
+      @media print {
+        .no-print { display: none !important; }
+        .print-only { display: block !important; }
+        body { background-color: white !important; color: black !important; }
+        .print-area { position: absolute; top: 0; left: 0; width: 100%; margin: 0; padding: 2cm; }
+      }
+      .print-only { display: none; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/",
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.560.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.39.3"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
